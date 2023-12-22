@@ -8,6 +8,9 @@ body ul {
 }
 
 #navBar {
+  position: sticky;
+  top: 0px;
+  background-color: white;
   padding-left: 5vw;
   padding-right: 5vw;
   box-shadow: 0px 4px 16px 0px rgba(17, 34, 17, 0.05);
@@ -16,15 +19,59 @@ body ul {
   display: inline;
 }
 
+#intro .intro-text {
+  font-size: 3em;
+  min-height: 70vh;
+  display: inline-block;
+}
+#intro .intro-text p {
+  padding-left: 10%;
+  margin-bottom: 20px;
+  overflow: hidden; /* Hide the overflow to create the typing effect */
+  white-space: nowrap; /* Ensure the text doesn't wrap */
+  letter-spacing: 10px; /* Adjust the spacing between letters */
+  animation: typing 2s steps(18), cursor 0.4s step-end infinite alternate;
+  border-right: 5px solid;
+  width: 100%;
+}
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+#intro #programmer-icon {
+  padding-right: 5%;
+}
+#intro #programmer-icon img {
+  float: right;
+  width: 500px;
+  height: 500px;
+}
+#intro .social-links {
+  display: block;
+  text-align: center;
+}
+#intro .resume-link {
+  margin: 0 auto;
+}
+#intro .resume-link:hover {
+  background-color: black;
+}
+
 .flex-container1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-}
-.flex-container1 > .item {
-  background-color: blue;
 }
 
 .flex-container2 {
